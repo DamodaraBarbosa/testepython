@@ -1,19 +1,24 @@
 def linha():
-    print('\033[1;33m--\033[m'*30)
+    print('\033[1;33m--\033[m'*34)
 
 
 def erro():
     print('\033[1;31mValor inválido, digite novamente!\033[m')
 
 
-def tabela ():
+def tabela (lista):
     linha()
-    print('\033[1;33mDADOS DOS PRODUTOS\033[m')
+    print(f'{"DADOS DOS PRODUTOS":>42}')
     linha()
-    print('\033[1;33mCÓDIGO\033m', end='')
-    print('\033[1;33mNOME\033[m', end='')
-    print('\033[1;33mPREÇO (R$)\033[m', end='')
-    print('\033[1;33mESTOQUE (unid.)\033[m',end='')
-    for i, v in enumerate(produtos):
-        print(i)
-        print(v)
+    print(f'{"CÓDIGO"}', end='')
+    print(f'{"NOME":>15}', end='')
+    print(f'{"PREÇO (R$)":>20}', end='')
+    print(f'{"ESTOQUE (unid.)":>25}')
+    for i, v in enumerate(lista):
+        print(i, end=' ')
+        print(f'\033[1;31m{lista[i][0]:>20}\033[m', end= ' ')
+        print(f'\033[1;32m{lista[i][1]:>13}\033[m', end=' ')
+        print(f'\033[1;37m{lista[i][2]:>22}\033[m')
+    linha()
+
+    def analise():

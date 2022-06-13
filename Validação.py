@@ -13,12 +13,12 @@ while True:
         vnome = nome.replace(" ", "")
     dados.append(nome)
     try:
-        preço = float(input('Preço do produto: R$ '))
+        preço = int(input('Preço do produto: R$ '))
     except ValueError:
         funções.erro()
         while True:
             try:
-                preço = float(input('Preço do produto: R$ '))
+                preço = int(input('Preço do produto: R$ '))
                 break
             except ValueError:
                 funções.erro()
@@ -43,7 +43,3 @@ while True:
     if continuidade == 'N':
         break
 funções.tabela(produtos)
-for i, v in enumerate(produtos):
-    print(i)
-    print(v)
-
