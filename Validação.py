@@ -35,7 +35,7 @@ while True:
                 funções.erro()
     dados.append(estoque)
     produtos.append(dados[:])
-    produtos.clear()
+    dados.clear()
     continuidade = str(input('Deseja continuar [S/N]? ')).upper().strip()
     while continuidade not in 'SN':
         funções.erro()
@@ -43,4 +43,7 @@ while True:
     if continuidade == 'N':
         break
 funções.tabela(produtos)
+for i, v in enumerate(produtos):
+    print(i)
+    print(v)
 
