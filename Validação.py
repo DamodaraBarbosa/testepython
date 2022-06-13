@@ -42,7 +42,5 @@ while True:
         continuidade = str(input('Deseja continuar [S/N]? ')).upper().strip()
     if continuidade == 'N':
         break
-print('--'*30)
-print(dados)
-print('--'*30)
+funções.tabela(produtos)
 
