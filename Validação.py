@@ -13,12 +13,12 @@ while True:
         vnome = nome.replace(" ", "")
     dados.append(nome)
     try:
-        preço = int(input('Preço do produto: R$ '))
+        preço = float(input('Preço do produto: R$ '))
     except ValueError:
         funções.erro()
         while True:
             try:
-                preço = int(input('Preço do produto: R$ '))
+                preço = float(input('Preço do produto: R$ '))
                 break
             except ValueError:
                 funções.erro()
@@ -43,3 +43,11 @@ while True:
     if continuidade == 'N':
         break
 funções.tabela(produtos)
+funções.opções()
+while True:
+    escolha = int(input('Digite a opção desejada: '))
+    while escolha not in range(0, 4):
+        funções.erro()
+        escolha = int(input('Digite a opção desejada: '))
+    if escolha == 0:
+        break

@@ -2,11 +2,15 @@ def linha():
     print('\033[1;33m--\033[m'*34)
 
 
+def linha2():
+    print('\033[1;33m=-\033[m'*34)
+
+
 def erro():
     print('\033[1;31mValor inválido, digite novamente!\033[m')
 
 
-def tabela (lista):
+def tabela(lista):
     linha()
     print(f'{"DADOS DOS PRODUTOS":>42}')
     linha()
@@ -21,4 +25,12 @@ def tabela (lista):
         print(f'\033[1;37m{lista[i][2]:>22}\033[m')
     linha()
 
-    def analise():
+
+def opções():
+    linha2()
+    print('1. Nome dos produtos cadastrados.')
+    print('2. Análise do preço dos produtos.')
+    print('3. Análise do estoque dos produtos.')
+    print('0. Finalizar programa')
+    linha2()
+
