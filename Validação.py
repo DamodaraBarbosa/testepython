@@ -43,11 +43,13 @@ while True:
     if continuidade == 'N':
         break
 funções.tabela(produtos)
-funções.opções()
 while True:
+    funções.opções()
     escolha = int(input('Digite a opção desejada: '))
+    funções.linha2()
     while escolha not in range(0, 4):
         funções.erro()
         escolha = int(input('Digite a opção desejada: '))
+    funções.tratamento(escolha, produtos)
     if escolha == 0:
         break
