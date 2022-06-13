@@ -1,4 +1,5 @@
 import funções
+from time import sleep
 
 
 produtos = list()
@@ -53,3 +54,7 @@ while True:
     funções.tratamento(escolha, produtos)
     if escolha == 0:
         break
+print('Finalizando o programa...')
+sleep(1)
+funções.linha2()
+print('PROGRAMA FINALIZADO!')
